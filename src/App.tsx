@@ -1,21 +1,13 @@
-import * as motion from "motion/react-client";
+import { Navbar } from "./components/Navbar";
+import { About } from "./components/About";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello, World!</h1>
-      <motion.div
-        style={box}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1 }}
-      />
-    </div>
+    <main className="w-full">
+      <Navbar />
+      <section id="about">
+        <About />
+      </section>
+    </main>
   );
 }
-
-const box = {
-  width: 100,
-  height: 100,
-  backgroundColor: "#ff0088",
-  borderRadius: 5,
-};
