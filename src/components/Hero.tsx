@@ -5,11 +5,43 @@ import {
   FaWhatsapp,
   FaChevronDown,
 } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export function Hero() {
+  const [displayedText, setDisplayedText] = useState("");
+  const [showRole, setShowRole] = useState(false);
+
+  const texts = ["Antonio Claudio", "Desenvolvedor Backend"];
+  const longestText = texts.reduce((longest, text) =>
+    text.length > longest.length ? text : longest,
+  );
+  const currentText = texts[showRole ? 1 : 0];
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    let charIndex = 0;
+
+    const type = () => {
+      if (charIndex <= currentText.length) {
+        setDisplayedText(currentText.slice(0, charIndex));
+        charIndex++;
+        timeout = setTimeout(type, 100);
+      } else {
+        timeout = setTimeout(() => {
+          setShowRole((prev) => !prev);
+          setDisplayedText("");
+        }, 3000);
+      }
+    };
+
+    type();
+
+    return () => clearTimeout(timeout);
+  }, [showRole, currentText]);
+
   return (
     <motion.header
-      className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950  pt-20"
+      className="w-full min-h-screen flex items-center justify-center bg-linear-to-br from-slate-950 via-blue-950 to-slate-950  pt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -20,7 +52,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center order-1 lg:order-none"
+            className="flex flex-col justify-center order-1 lg:order-0"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -30,8 +62,20 @@ export function Hero() {
             >
               <span className="text-white">Olá, eu sou</span>
               <br />
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Antonio Claudio
+              <span className="relative inline-flex items-center min-h-20 sm:min-h-24 lg:min-h-32">
+                <span className="invisible bg-linear-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  {longestText}
+                </span>
+                <span className="absolute inset-0 bg-linear-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  {displayedText}
+                  <motion.span
+                    animate={{ opacity: [1, 0] }}
+                    transition={{ duration: 0.5, repeat: Infinity }}
+                    className="ml-1"
+                  >
+                    |
+                  </motion.span>
+                </span>
               </span>
             </motion.h1>
 
@@ -39,19 +83,14 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-xl"
+              className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl"
             >
-              Desenvolvedor backend apaixonado por criar{" "}
-              <span className="text-emerald-400 font-semibold">
-                APIs escaláveis
-              </span>
-              , arquitetura limpa e soluções robustas em nuvem.
-              Especializando-me em
-              <span className="text-emerald-400 font-semibold">
-                {" "}
-                Python, Django e FastAPI
-              </span>
-              .
+              Formado em Ciência da Computação, decidi seguir minha carreira
+              como desenvolvedor{" "}
+              <span className="text-emerald-400 font-semibold">Backend</span>{" "}
+              atuo no desenvolvimento de APIs REST escaláveis, seguras e bem
+              estruturadas, aplicando boas práticas e tecnologias modernas do
+              mercado.
             </motion.p>
 
             <motion.div
@@ -93,7 +132,7 @@ export function Hero() {
             >
               <a
                 href="#about"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex px-8 py-4 bg-linear-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-1"
               >
                 Conhecer meu trabalho
               </a>
@@ -110,7 +149,7 @@ export function Hero() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 via-cyan-400 to-blue-400 opacity-20 blur-3xl"
+                className="absolute inset-0 rounded-full bg-linear-to-br from-emerald-400 via-cyan-400 to-blue-400 opacity-20 blur-3xl"
               />
 
               <motion.div
@@ -120,7 +159,7 @@ export function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 via-blue-500 to-cyan-500 shadow-2xl flex items-center justify-center overflow-hidden border-2 border-slate-700/30"
+                className="absolute inset-0 rounded-full bg-linear-to-br from-emerald-400 via-blue-500 to-cyan-500 shadow-2xl flex items-center justify-center overflow-hidden border-2 border-slate-700/30"
               >
                 <div className="w-64 lg:w-80 h-64 lg:h-80 bg-slate-900 rounded-full flex items-center justify-center">
                   <div className="text-center">

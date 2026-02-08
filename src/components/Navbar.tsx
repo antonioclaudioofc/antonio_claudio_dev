@@ -47,7 +47,7 @@ export function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-slate-950/95 via-slate-950/90 to-slate-950/80 backdrop-blur-lg border-b border-emerald-500/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-slate-950/95 via-slate-950/90 to-slate-950/80 backdrop-blur-lg border-b border-emerald-500/10"
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -61,13 +61,13 @@ export function Navbar() {
           >
             <a href="#home" className="flex items-center gap-3 group">
               <motion.div
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/30"
+                className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/30"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="text-white font-bold text-base">AC</span>
               </motion.div>
-              <span className="max-sm:hidden sm:block font-bold text-base text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 group-hover:opacity-80 transition-opacity">
+              <span className="max-sm:hidden sm:block font-bold text-base text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-cyan-400 to-blue-400 group-hover:opacity-80 transition-opacity">
                 Antonio Claudio
               </span>
             </a>
@@ -98,12 +98,12 @@ export function Navbar() {
                     {item.label}
                   </span>
                   <motion.span
-                    className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"
+                    className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-emerald-400 via-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"
                     layoutId={`underline-${item.label}`}
                   />
                   {isActive && (
                     <motion.span
-                      className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-cyan-500"
+                      className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-emerald-400 to-cyan-500"
                       layoutId="activeUnderline"
                       transition={{
                         duration: 0.4,
@@ -127,8 +127,8 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg" />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-r from-emerald-500 to-cyan-500 rounded-lg" />
+            <div className="absolute inset-0 bg-linear-to-r from-emerald-600 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="relative z-10">Vamos conversar</span>
           </motion.a>
 
@@ -170,7 +170,7 @@ export function Navbar() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <div className="px-4 py-6 space-y-2 bg-gradient-to-b from-slate-900/50 to-slate-950/50 border-t border-emerald-500/10">
+          <div className="px-4 py-6 space-y-2 bg-linear-to-b from-slate-900/50 to-slate-950/50 border-t border-emerald-500/10">
             {navItems.map((item, index) => {
               const sectionId = item.href.substring(1);
               const isActive = activeSection === sectionId;
@@ -193,7 +193,7 @@ export function Navbar() {
 
                   {isActive && (
                     <motion.div
-                      className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-cyan-500"
+                      className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-emerald-400 to-cyan-500"
                       layoutId="mobileActiveIndicator"
                       transition={{ duration: 0.4 }}
                     />
@@ -203,7 +203,7 @@ export function Navbar() {
             })}
             <motion.a
               href="#contact"
-              className="block w-full mt-4 px-4 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-emerald-500/40 transition-all duration-300"
+              className="block w-full mt-4 px-4 py-3 bg-linear-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-emerald-500/40 transition-all duration-300"
               onClick={() => setIsOpen(false)}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}

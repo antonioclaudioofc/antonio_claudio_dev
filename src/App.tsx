@@ -13,14 +13,14 @@ export default function App() {
         <Hero />
       </section>
 
-      {/* <section id="about">
+      <section id="about">
         <About />
       </section>
 
-      <section id="skills">
+      {/* <section id="skills">
         <Skills />
       </section>
-
+      
       <section id="projects">
         <Projects />
       </section> */}
