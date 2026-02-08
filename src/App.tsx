@@ -17,11 +17,11 @@ export default function App() {
         <About />
       </section>
 
-      {/* <section id="skills">
+      <section id="skills">
         <Skills />
       </section>
-      
-      <section id="projects">
+
+      {/* <section id="projects">
         <Projects />
       </section> */}
     </main>

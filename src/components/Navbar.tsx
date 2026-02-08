@@ -8,7 +8,7 @@ export function Navbar() {
   const navItems = [
     { label: "Início", href: "#home" },
     { label: "Sobre", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Habilidades", href: "#skills" },
     { label: "Projetos", href: "#projects" },
     { label: "Contato", href: "#contact" },
   ];
