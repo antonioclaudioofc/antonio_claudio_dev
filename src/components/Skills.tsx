@@ -5,7 +5,7 @@ import {
   SiJavascript,
   SiReact,
   SiTailwindcss,
-  SiNodedotjs,
+  SiDjango,
   SiPython,
   SiPostgresql,
   SiPrisma,
@@ -23,7 +23,7 @@ export function Skills() {
 
   const backEnd = [
     { label: "Python", icon: SiPython, colorClass: "text-blue-400" },
-    { label: "Node.js", icon: SiNodedotjs, colorClass: "text-emerald-400" },
+    { label: "Django", icon: SiDjango, colorClass: "text-emerald-400" },
     { label: "PostgreSQL", icon: SiPostgresql, colorClass: "text-sky-300" },
     { label: "Prisma", icon: SiPrisma, colorClass: "text-white" },
     { label: "Neon", icon: FaDatabase, colorClass: "text-cyan-300" },

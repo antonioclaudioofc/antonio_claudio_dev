@@ -116,7 +116,7 @@ export function Hero() {
                 <FaLinkedin className="text-xl text-slate-300 hover:text-emerald-400 transition-colors" />
               </a>
               <a
-                href="https://wa.me/5598970256674"
+                href="https://wa.me/5598970256674?text=Oi%20Antonio%2C%20vim%20pelo%20seu%20portfolio%20e%20gostaria%20de%20conversar."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-slate-800/50 hover:bg-emerald-500/20 flex items-center justify-center transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-emerald-400/50"

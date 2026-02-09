@@ -43,7 +43,7 @@ export function About() {
 
             <div className="mt-8">
               <a
-                href="/curriculo.pdf"
+                href="/Antonio Claudio Teixeira Alves.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/90 hover:bg-emerald-500 text-white rounded-lg font-semibold transition-colors"
               >
                 Baixar CV
