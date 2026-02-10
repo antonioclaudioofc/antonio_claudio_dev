@@ -15,6 +15,22 @@ type Project = {
   links?: { label: string; href: string }[];
 };
 
+const techStyles: Record<string, string> = {
+  React: "bg-sky-500/15 text-sky-300 border-sky-500/30",
+  TypeScript: "bg-indigo-500/15 text-indigo-300 border-indigo-500/30",
+  JavaScript: "bg-amber-500/15 text-amber-300 border-amber-500/30",
+  Python: "bg-amber-500/15 text-amber-300 border-amber-500/30",
+  Django: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+  FastAPI: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+  Postgres: "bg-blue-500/15 text-blue-300 border-blue-500/30",
+  Prisma: "bg-violet-500/15 text-violet-300 border-violet-500/30",
+  "yt-dlp": "bg-slate-500/15 text-slate-300 border-slate-500/30",
+  FFmpeg: "bg-rose-500/15 text-rose-300 border-rose-500/30",
+};
+
+const getTechClass = (tech: string) =>
+  techStyles[tech] ?? "bg-slate-500/15 text-slate-300 border-slate-500/30";
+
 const projects: Project[] = [
   {
     title: "Arena Manager",
@@ -134,7 +150,9 @@ export function Projects() {
                   {p.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-xs px-2 py-1 bg-slate-800/60 rounded text-slate-200"
+                      className={`text-xs px-2.5 py-1 rounded border ${getTechClass(
+                        t,
+                      )}`}
                     >
                       {t}
                     </span>
@@ -157,7 +175,7 @@ export function Projects() {
                         >
                           {isRepo && <FaGithub />}
 
-                          {isDemo && <FaEarthAmericas />}
+                          {isDemo && <FaEarthAmericas className="text-green-700" />}
 
                           <span>{l.label}</span>
                         </a>
