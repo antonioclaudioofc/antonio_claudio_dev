@@ -8,9 +8,9 @@ import {
   SiDjango,
   SiPython,
   SiPostgresql,
-  SiPrisma,
 } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
 
 export function Skills() {
   const frontEnd = [
@@ -25,7 +25,7 @@ export function Skills() {
     { label: "Python", icon: SiPython, colorClass: "text-blue-400" },
     { label: "Django", icon: SiDjango, colorClass: "text-emerald-400" },
     { label: "PostgreSQL", icon: SiPostgresql, colorClass: "text-sky-300" },
-    { label: "Prisma", icon: SiPrisma, colorClass: "text-white" },
+    { label: "Firebase", icon: IoLogoFirebase, colorClass: "text-yellow-400" },
     { label: "Neon", icon: FaDatabase, colorClass: "text-cyan-300" },
   ];
 

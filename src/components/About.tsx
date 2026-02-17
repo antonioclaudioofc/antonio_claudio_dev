@@ -26,19 +26,15 @@ export function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
-              Formado em Ciência da Computação, atuo como desenvolvedor backend
-              com foco em{" "}
-              <span className="text-emerald-400 font-semibold">
-                Python e APIs REST
-              </span>
-              .
+            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-6">
+              Tenho experiência na construção de sistemas completos, desde o
+              backend com Django, FastAPI e Flask até o frontend utilizando
+              React, Next.js, TypeScript e TailwindCSS, sempre aplicando boas
+              práticas, Clean Code e princípios de arquitetura de software.
             </p>
-
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
-              Experiência no desenvolvimento de aplicações web utilizando
-              FastAPI, SQLAlchemy, PostgreSQL e Docker, além de integração com
-              frontend em React, Next.js e TypeScript.
+              Busco desenvolver soluções escaláveis, seguras e eficientes, com
+              forte atenção à organização, performance e experiência do usuário.
             </p>
 
             <div className="mt-8">

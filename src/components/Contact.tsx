@@ -119,7 +119,11 @@ export function Contact() {
             Entrar em contato
           </h2>
           <p className="mt-3 text-slate-300">
-            Vamos conversar sobre seu projeto.
+            Respondo normalmente em até 24 horas.
+          </p>
+          <p className="mt-3 text-slate-300">
+            Aberto a oportunidades como Desenvolvedor Full Stack / Backend
+            Python.
           </p>
         </div>
 
@@ -148,6 +152,9 @@ export function Contact() {
                 </a>
               );
             })}
+            <p className="mt-3 text-green-300">
+              Disponível para trabalho remoto ou presencial.
+            </p>
           </div>
 
           <form
@@ -155,7 +162,7 @@ export function Contact() {
             onSubmit={handleSubmit}
           >
             <h3 className="text-lg font-semibold text-white mb-4">
-              Me descreva sua demanda
+              Fale comigo sobre oportunidades
             </h3>
 
             <div className="space-y-4">
@@ -188,7 +195,7 @@ export function Contact() {
                 <textarea
                   name="message"
                   rows={5}
-                  placeholder="Descreva o que precisa"
+                  placeholder="Escreva sua mensagem aqui"
                   value={formValues.message}
                   onChange={handleChange}
                   className="mt-2 w-full rounded-lg border border-slate-700/60 bg-gray-600/60 px-4 py-2 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none"

@@ -11,7 +11,7 @@ export function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [showRole, setShowRole] = useState(false);
 
-  const texts = ["Antonio Claudio", "Desenvolvedor Backend"];
+  const texts = ["Antonio Claudio", "Desenvolvedor Full Stack"];
   const longestText = texts.reduce((longest, text) =>
     text.length > longest.length ? text : longest,
   );
@@ -85,12 +85,14 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl"
             >
-              Formado em Ciência da Computação, decidi seguir minha carreira
-              como desenvolvedor{" "}
-              <span className="text-emerald-400 font-semibold">Backend</span>{" "}
-              atuo no desenvolvimento de APIs REST escaláveis, seguras e bem
-              estruturadas, aplicando boas práticas e tecnologias modernas do
-              mercado.
+              Formado em Ciência da Computação, atuo como desenvolvedor
+              <span className="text-emerald-400 font-semibold">
+                {" "}
+                Full Stack
+              </span>
+              , desenvolvendo APIs REST com Python e aplicações web utilizando
+              React, Next.js e TypeScript. Também possuo experiência com Docker,
+              bancos de dados relacionais e integração entre frontend e backend.
             </motion.p>
 
             <motion.div
@@ -166,7 +168,9 @@ export function Hero() {
                     <div className="text-6xl lg:text-7xl mb-2 text-white">
                       AC
                     </div>
-                    <p className="text-slate-400 text-sm">Backend Developer</p>
+                    <p className="text-slate-400 text-sm">
+                      Full Stack Developer
+                    </p>
                   </div>
                 </div>
               </motion.div>

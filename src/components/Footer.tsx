@@ -25,7 +25,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           <div className="text-center">
             <p className="text-xl font-semibold text-white">Antonio Claudio</p>
-            <p className="text-sm text-slate-400">Backend Developer</p>
+            <p className="text-sm text-slate-400">FullStack Developer</p>
           </div>
 
           <div className="flex items-center gap-4">

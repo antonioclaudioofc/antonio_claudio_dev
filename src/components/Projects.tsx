@@ -34,10 +34,19 @@ const getTechClass = (tech: string) =>
 const projects: Project[] = [
   {
     title: "Arena Manager",
-    subtitle: "Frontend + Backend",
+    subtitle: "Fullstack | API REST + Autenticação",
     description:
-      "Sistema de gerenciamento de arenas dividido em duas aplicações: frontend para gestão/UX e backend para API, autenticação e regras de negócio.",
-    tech: ["React", "TypeScript", "Python", "FastAPI", "Postgres"],
+      "Sistema fullstack para gerenciamento de arenas esportivas com autenticação, controle de reservas e regras de negócio. Backend em FastAPI com arquitetura em camadas, integração com PostgreSQL e deploy em cloud.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Docker",
+      "JWT",
+      "REST",
+    ],
     image: arenaManagerImg,
     imageAlt: "Tela do Arena Manager",
     links: [
@@ -54,9 +63,9 @@ const projects: Project[] = [
   },
   {
     title: "Aniverlembre",
-    subtitle: "Django",
+    subtitle: "Backend | Django",
     description:
-      "Aplicação em Django para gerenciar lembretes de aniversários. ",
+      "Sistema backend em Django para gerenciamento de lembretes com autenticação, persistência em PostgreSQL e aplicação de padrões MVC.",
     tech: ["Python", "Django", "JavaScript", "Postgres"],
     image: aniverlembreImg,
     imageAlt: "Tela do Aniverlembre",
@@ -70,9 +79,9 @@ const projects: Project[] = [
   },
   {
     title: "API Audio Force",
-    subtitle: "FastAPI",
+    subtitle: "Backend | FastAPI",
     description:
-      "Microserviço em Python + FastAPI que baixa vídeos do YouTube e converte para MP3 para transferência/uso offline.",
+      "Microserviço em FastAPI para processamento de mídia, download e conversão de vídeos, seguindo arquitetura de serviços independentes.",
     tech: ["Python", "FastAPI", "yt-dlp", "FFmpeg"],
     image: apiAudioForceImg,
     imageAlt: "Tela da API Audio Force",
@@ -104,7 +113,8 @@ export function Projects() {
             Projetos
           </h2>
           <p className="mt-3 text-slate-300">
-            Projetos mais recentes com foco em UI e performance.
+            Projetos reais com foco em backend, APIs, arquitetura e sistemas
+            escaláveis.
           </p>
         </div>
 
@@ -175,7 +185,9 @@ export function Projects() {
                         >
                           {isRepo && <FaGithub />}
 
-                          {isDemo && <FaEarthAmericas className="text-green-700" />}
+                          {isDemo && (
+                            <FaEarthAmericas className="text-green-700" />
+                          )}
 
                           <span>{l.label}</span>
                         </a>
