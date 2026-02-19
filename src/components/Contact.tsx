@@ -12,7 +12,7 @@ const contactCards = [
   {
     title: "WhatsApp",
     value: "(98) 97025-6674",
-    href: "https://wa.me/5598970256674?text=Oi%20Antonio%2C%20vim%20pelo%20seu%20portfolio%20e%20gostaria%20de%20conversar.",
+    href: "https://wa.me/5598970256674?text=Ol%C3%A1%20Antonio%2C%20conheci%20seu%20trabalho%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20poss%C3%ADvel%20oportunidade%20ou%20projeto.%20Podemos%20falar%20por%20aqui%3F",
     icon: FaWhatsapp,
   },
   {
@@ -73,7 +73,7 @@ export function Contact() {
 
     try {
       const response = await fetch(
-        "https://notify-me-iota.vercel.app/contact/",
+        "https://notify-me-iota.vercel.app/notifications/antonio-claudio-dev/contact/",
         {
           method: "POST",
           headers: {
