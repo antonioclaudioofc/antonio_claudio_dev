@@ -27,14 +27,18 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-6">
-              Tenho experiência na construção de sistemas completos, desde o
-              backend com Django, FastAPI e Flask até o frontend utilizando
-              React, Next.js, TypeScript e TailwindCSS, sempre aplicando boas
-              práticas, Clean Code e princípios de arquitetura de software.
+              Sou um desenvolvedor full stack com graduação em Ciência da
+              Computação pelo Instituto Federal do Maranhão (IFMA). Tenho
+              experiência sólida em desenvolvimento web, com foco em React,
+              Next.js, Python (FastAPI, Django), TypeScript, Firebase e SQL.
             </p>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
-              Busco desenvolver soluções escaláveis, seguras e eficientes, com
-              forte atenção à organização, performance e experiência do usuário.
+              Sou entusiasta de tecnologias emergentes como Docker, Kubernetes e
+              Kafka, sempre aplicando boas práticas de desenvolvimento,
+              metodologias ágeis e princípios de escalabilidade. Busco uma
+              oportunidade como Desenvolvedor Full Stack ou Backend para crescer
+              como engenheiro de software e contribuir com soluções orientadas a
+              resultados.
             </p>
 
             <div className="mt-8">

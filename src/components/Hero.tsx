@@ -85,14 +85,11 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl"
             >
-              Formado em Ciência da Computação, atuo como desenvolvedor
-              <span className="text-emerald-400 font-semibold">
-                {" "}
-                Full Stack
-              </span>
-              , desenvolvendo APIs REST com Python e aplicações web utilizando
-              React, Next.js e TypeScript. Também possuo experiência com Docker,
-              bancos de dados relacionais e integração entre frontend e backend.
+              Sou desenvolvedor full stack, graduado em Ciência da Computação
+              pelo IFMA, com experiência sólida em React, Next.js, Python
+              (FastAPI e Django), TypeScript, Firebase e SQL. Tenho foco em
+              soluções escaláveis, performance, UX/UI e integração eficiente
+              entre frontend e backend.
             </motion.p>
 
             <motion.div
