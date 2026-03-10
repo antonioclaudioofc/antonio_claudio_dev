@@ -11,4 +11,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/rabbitmq-api": {
+        target: "https://raccoon.lmq.cloudamqp.com",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/rabbitmq-api/, "/api"),
+      },
+    },
+  },
 });
