@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { FaEnvelope, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { producer } from "../messaging/producer";
 
 const contactCards = [
   {
@@ -73,11 +72,25 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      await producer.publishMessage("contact_message", {
-        name: formValues.name.trim(),
-        email: formValues.email.trim(),
-        message: formValues.message.trim(),
-      });
+      const response = await fetch(
+        "/notify-api/api/antonio-claudio-dev/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-API-Key": import.meta.env.VITE_NOTIFY_API_KEY,
+          },
+          body: JSON.stringify({
+            name: formValues.name.trim(),
+            email: formValues.email.trim(),
+            message: formValues.message.trim(),
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar mensagem. Tente novamente.");
+      }
 
       setStatus("success");
       setFormValues({ name: "", email: "", message: "" });

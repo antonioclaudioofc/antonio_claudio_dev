@@ -13,10 +13,10 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/rabbitmq-api": {
-        target: "https://raccoon.lmq.cloudamqp.com",
+      "/notify-api": {
+        target: process.env.VITE_NOTIFY_API_URL || "https://notify-me-dev.vercel.app",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/rabbitmq-api/, "/api"),
+        rewrite: (path) => path.replace(/^\/notify-api/, ""),
       },
     },
   },
